@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UCL</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'website/css/base.css' %}">
+</head>
+<body>
+    <header class="jumbotron text-center">
+        <h1>Champions League</h1>
+        <p>Competição de futebol</p>
+        <nav>
+            <a href="{% url 'website:grupoA' %}" class="btn btn-info">Grupo A</a>
+            <a href="{% url 'website:grupoB' %}" class="btn btn-info">Grupo B</a>
+            <a href="{% url 'website:grupoC' %}" class="btn btn-info">Grupo C</a>
+        </nav>
+    </header>
+    <article class="container">
+        <main class="col-sm-6">
+            {% block main %}
+	        {% endblock main %}
+        </main>
+        <aside class="col-sm-6">
+            {% load static %}
+            <img src="{% static 'website/images/imagem.png' %}">
+        </aside>
+    </article>
+    <footer>1º e 2º lugares Qualificado-Liga dos Campeões (Playoffs),3ºQualificado-Liga Europa(Playoffs)</footer>
+</body>
+</html>
