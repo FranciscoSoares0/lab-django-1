@@ -1,11 +1,39 @@
 {% extends 'website/layout.html' %}
 
 {% block main %}
+    <style>
+        h2{
+            font-size:200%
+        }
+        h3{
+            font-size:300%;
+            margin-bottom:25px
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 25% 25% 25% 25%;
+            align-items:center;
+            justify-content: center;
+            height: 230px;
+
+        }
+
+        .imagem{
+            zoom:20%;
+            place-self: center;
+        }
+    </style>
     <h3>Grupo B</h3>
-    <ul>
-        <li>Liverpool</li>
-        <li>Atlético Madrid</li>
-        <li>Porto</li>
-        <li>Milan</li>
-    </ul>
+    <div class="grid-container">
+        <img class="imagem" src="static/website/images/liverpool.png">
+        <h2>Liverpool</h2>
+        <img class="imagem"  src="static/website/images/atletico.png">
+        <h2>Atlético Madrid</h2>
+        <img class="imagem"  src="static/website/images/porto.png">
+        <h2>FC Porto</h2>
+        <img class="imagem"  src="static/website/images/milan.png">
+        <h2>AC Milan</h2>
+
+    </div>
 {% endblock %}

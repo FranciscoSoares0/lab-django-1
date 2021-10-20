@@ -1,11 +1,39 @@
-{% extends 'website/layout.html' %}
+{% extends 'website/layout.html'%}
 
 {% block main %}
+    <style>
+        h2{
+            font-size:200%
+        }
+        h3{
+            font-size:300%;
+            margin-bottom:25px
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 25% 25% 25% 25%;
+            align-items:center;
+            justify-content: center;
+            height: 230px;
+
+        }
+
+        .imagem{
+            zoom:20%;
+            place-self: center;
+        }
+    </style>
     <h3>Grupo A</h3>
-    <ul>
-        <li>Manchester City</li>
-        <li>PSG</li>
-        <li>Club Brugge</li>
-        <li>RB Leipzig</li>
-    </ul>
+    <div class="grid-container">
+        <img class="imagem" src="static/website/images/c.png">
+        <h2>Manchester City</h2>
+        <img class="imagem"  src="static/website/images/psg.png">
+        <h2>PSG</h2>
+        <img class="imagem"  src="static/website/images/leipzig.png">
+        <h2>RB Leipzig</h2>
+        <img class="imagem"  src="static/website/images/brugge.png">
+        <h2>Club Brugge</h2>
+
+    </div>
 {% endblock %}
